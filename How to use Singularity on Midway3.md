@@ -10,8 +10,8 @@ Usage `singularity [OPTIONS] run CONTAINERNAME`
 2. Create a folder in your home or scratch directory to store the container. For bigger image scratch directory would be advised.
     1. **`mkdir containername`** # Substitute containername with the name of the image
 3. Enter that folder (`cd containername`)
-4. Then run **singularity pull containername.sif docker://repo/containername:tags**
-5. Example: **`singularity pull ubuntu.sif docker://ubuntu:latest`**
+4. Then run **module load singularity && singularity pull containername.sif docker://repo/containername:tags**
+5. Example: **`module load singularity && singularity pull ubuntu.sif docker://ubuntu:latest`**
 6. It pulls a docker container called "ubuntu" from the "default" repository and looks for the "latest" version. The docker container is then converted to a Singularity container.
 7. From here, you should be able to run the container by running **`singularity run containername.sif`** where containername.sif is the name of the container created from the "singularity pull ..." command above**.**
 
